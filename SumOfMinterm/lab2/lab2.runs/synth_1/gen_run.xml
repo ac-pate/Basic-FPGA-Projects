@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1716337715">
+  <File Type="VDS-TIMING-PB" Name="sum_of_minterms_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="sum_of_minterms_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="sum_of_minterms.dcp"/>
+  <File Type="REPORTS-TCL" Name="sum_of_minterms_reports.tcl"/>
+  <File Type="PA-TCL" Name="sum_of_minterms.tcl"/>
+  <File Type="RDS-RDS" Name="sum_of_minterms.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="sum_of_minterms_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="sum_of_minterms_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="sum_of_minterms_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/code/and3_gate.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../and3_gate.vhd"/>
+        <Attr Name="ImportTime" Val="1716333257"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/code/or3_gate.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../or3_gate.vhd"/>
+        <Attr Name="ImportTime" Val="1716336496"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/code/sum_of_minterms.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sum_of_minterms.vhd"/>
+        <Attr Name="ImportTime" Val="1716334850"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sum_of_minterms"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/code/s_o_m.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../s_o_m.xdc"/>
+        <Attr Name="ImportTime" Val="1716337399"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

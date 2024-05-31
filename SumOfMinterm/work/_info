@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/mylab2/code
+T_opt
+V07`>^Mg_EizbRkz;Z7nzP0
+04 15 10 work sum_of_minterms structural 1
+Z1 =1-c8d9d233c595-664d3782-75ac5-2160
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 n@_opt
+Z4 OL;O;6.6g;45
+Z5 d/home/a/ac_pate/COEN313/mylab2/code
+Eand3_gate
+Z6 w1716333257
+Z7 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R5
+Z8 8and3_gate.vhd
+Z9 Fand3_gate.vhd
+l0
+L3
+Z10 VXO4<Y8N1ZVITld7GXcUfn3
+Z11 OL;C;6.6g;45
+32
+Z12 tExplicit 1
+Z13 !s100 =88HV?[UFl4]V25BM7a3<1
+Aexample
+R7
+Z14 DEx4 work 9 and3_gate 0 22 XO4<Y8N1ZVITld7GXcUfn3
+l9
+L9
+Z15 V;RFMkFlQ:IkN>RfMRATU;0
+R11
+32
+Z16 Mx1 4 ieee 14 std_logic_1164
+R12
+Z17 !s100 >;GcW1aEKNibUL7cO;bbG1
+Eor3_gate
+Z18 w1716336496
+R7
+R5
+Z19 8or3_gate.vhd
+Z20 For3_gate.vhd
+l0
+L3
+Z21 VW0Qz_56zTc:M;e;L70YJm0
+R11
+32
+R12
+Z22 !s100 ReHB?YHc1WHR3iiF4li=G3
+Aexample
+R7
+Z23 DEx4 work 8 or3_gate 0 22 W0Qz_56zTc:M;e;L70YJm0
+l9
+L9
+Z24 V1GEQS9ElgHiJ1eha71=D80
+R11
+32
+R16
+R12
+Z25 !s100 1]AM2h:<zl;]0LPCf1NNm0
+Esum_of_minterms
+Z26 w1716334850
+R7
+R5
+Z27 8sum_of_minterms.vhd
+Z28 Fsum_of_minterms.vhd
+l0
+L4
+Z29 V>]XZ[_a1]a=`GKIJVUEkW1
+R11
+32
+R12
+Z30 !s100 ;Zh^gloF;9hl6[nlYRB__3
+Astructural
+R7
+Z31 DEx4 work 15 sum_of_minterms 0 22 >]XZ[_a1]a=`GKIJVUEkW1
+l29
+L9
+Z32 VJLb779gXV=C8I^m>JLEKU0
+R11
+32
+R16
+R12
+Z33 !s100 5m;_84W48=7Z9F^bCPilh1

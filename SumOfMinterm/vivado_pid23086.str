@@ -1,0 +1,92 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 23086
+License: Customer
+
+Current time: 	Tue May 21 21:28:59 EDT 2024
+Time zone: 	Eastern Standard Time (America/Montreal)
+
+OS: Scientific Linux release 7.9 (Nitrogen)
+OS Version: 3.10.0-1160.114.2.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 18 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ac_pate
+User home directory: /nfs/home/a/ac_pate
+User working directory: /nfs/home/a/ac_pate/COEN313/mylab2/code
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado
+HDI_APPROOT: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+RDI_DATADIR: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/data
+RDI_BINDIR: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/a/ac_pate/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/a/ac_pate/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /nfs/home/a/ac_pate/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/nfs/home/a/ac_pate/COEN313/mylab2/code/vivado.log
+Vivado journal file location: 	/nfs/home/a/ac_pate/COEN313/mylab2/code/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-23086-bulgaria.encs.concordia.ca
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 6062@license-cadpass.encs.concordia.ca:6088@license-cadpass.encs.concordia.ca
+XILINX_DSP: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+XILINX_SDK: /CMC/tools/xilinx/Vivado_2018.2/SDK/2018.2
+XILINX_VIVADO: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+XILINX_VIVADO_HLS: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+
+
+GUI allocated memory:	118 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,975 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 17 MB (+15230kb) [00:00:12]
+// [Engine Memory]: 4,829 MB (+4912351kb) [00:00:13]
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 1029ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 27 MB (+9477kb) [00:00:22]
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 457ms to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 43 MB (+15680kb) [00:00:36]
+// TclEventType: START_GUI
+// [GUI Memory]: 49 MB (+3448kb) [00:01:06]
+// Tcl Message: start_gui 
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1138ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 35 MB. Current time: 5/21/24 9:29:01 PM EDT
+// [GUI Memory]: 52 MB (+1111kb) [00:02:20]
+selectButton(PAResourceEtoH.GettingStartedView_QUICK_TAKE_VIDEOS, "Quick Take Videos"); // x (w, ck)
+selectButton(PAResourceEtoH.GettingStartedView_QUICK_TAKE_VIDEOS, "Quick Take Videos"); // x (w, ck)
+selectButton(PAResourceEtoH.GettingStartedView_QUICK_TAKE_VIDEOS, "Quick Take Videos"); // x (w, ck)
+selectButton(PAResourceEtoH.GettingStartedView_QUICK_TAKE_VIDEOS, "Quick Take Videos"); // x (w, ck)
+// [GUI Memory]: 55 MB (+192kb) [00:03:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 34 MB. Current time: 5/21/24 9:59:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 33 MB. Current time: 5/21/24 10:29:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 32 MB. Current time: 5/21/24 10:59:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 33 MB. Current time: 5/21/24 11:29:04 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,980 MB. GUI used memory: 33 MB. Current time: 5/21/24 11:59:04 PM EDT
