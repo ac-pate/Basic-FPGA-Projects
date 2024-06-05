@@ -1,12 +1,12 @@
-
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;  -- This library is not recommended. Use numeric_std instead.
-use IEEE.numeric_std.all;
+use IEEE.numeric_std.all; -- Use numeric_std for arithmetic operations
 
 entity converter is
-    port( sign_mag : in std_logic_vector(3 downto 0);
-          twos_comp : out std_logic_vector(3 downto 0) );
+    port(
+        sign_mag : in std_logic_vector(3 downto 0);
+        twos_comp : out std_logic_vector(3 downto 0)
+    );
 end entity converter;
 
 architecture arch of converter is
@@ -17,11 +17,12 @@ architecture arch of converter is
 begin
     sign <= sign_mag(3);
     mag <= sign_mag(2 downto 0);
-    notmag <= not mag;
 
-    process(all)
+    process (sign, mag)
     begin
+        notmag <= not mag;
         add1 <= std_logic_vector(unsigned(notmag) + 1);
+
         if (sign = '0') then
             twos_comp <= sign_mag;
         else
