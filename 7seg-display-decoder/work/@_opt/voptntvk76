@@ -1,0 +1,37 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/7seg-display
+T_opt
+Z1 V@KFIj3JB8kIfC72h[zQOa0
+Z2 04 7 10 work hex7seg behavioral 1
+Z3 =1-c8d9d21ef67b-6663dca4-e1a41-1585
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6g;45
+Z7 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/7seg-display
+Ehex7seg
+Z8 w1717820126
+Z9 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z10 8hex7seg.vhd
+Z11 Fhex7seg.vhd
+l0
+L5
+Z12 VcQMhW12zdf=9?gimN0e?N2
+Z13 OL;C;6.6g;45
+Z14 tExplicit 1
+Z15 !s100 `=[EanCPSSfZL=b`8KYi<2
+Abehavioral
+R9
+DEx65 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/7seg-display/work 7 hex7seg 0 22 cQMhW12zdf=9?gimN0e?N2
+32
+Mx1 17 __model_tech/ieee 14 std_logic_1164
+l14
+L13
+Z16 V2EUHZLEFDo=O7GQWfmElk2
+R13
+R14
+Z17 !s100 zBM<f8kTl3iaWm<al_13G3

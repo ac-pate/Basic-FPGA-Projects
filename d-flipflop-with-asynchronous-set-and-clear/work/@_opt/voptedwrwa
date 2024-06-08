@@ -1,0 +1,37 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/d-flipflop
+T_opt
+Z1 VYYH_dK=zzmZLQglg2CB_e1
+Z2 04 10 10 work d_flipflop behavioral 1
+Z3 =1-c8d9d21ef67b-6663e51c-88f7c-271d
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6g;45
+Z7 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/d-flipflop
+Ed_flipflop
+Z8 w1717822652
+Z9 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z10 8d-ff.vhd
+Z11 Fd-ff.vhd
+l0
+L5
+Z12 Vdal;=7foRC`ca_4Og;B[@3
+Z13 OL;C;6.6g;45
+Z14 tExplicit 1
+Z15 !s100 ^Ym=YL[l_l@od7PEIid]D0
+Abehavioral
+R9
+DEx63 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/d-flipflop/work 10 d_flipflop 0 22 dal;=7foRC`ca_4Og;B[@3
+32
+Mx1 17 __model_tech/ieee 14 std_logic_1164
+l17
+L16
+Z16 Vj78=C>g5HQ`nX_MF`5k5]0
+R13
+R14
+Z17 !s100 Wnlk]POU?N_@Uo<_VS8To1
