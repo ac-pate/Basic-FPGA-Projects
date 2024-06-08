@@ -1,0 +1,37 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/majority-circuit
+T_opt
+Z1 V]]YAIk6:af0E==@d:Yg=c3
+Z2 04 8 10 work majority structural 1
+Z3 =1-c8d9d21ef67b-6663d419-3db12-5964
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6g;45
+Z7 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/majority-circuit
+Emajority
+Z8 w1717818374
+Z9 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z10 8majority.vhd
+Z11 Fmajority.vhd
+l0
+L4
+Z12 V_4kWQm6A`YV8c_@OdCBKj3
+Z13 OL;C;6.6g;45
+Z14 tExplicit 1
+Z15 !s100 f_D<_2hbg7@NKjnG7ocmb1
+Astructural
+R9
+DEx69 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/majority-circuit/work 8 majority 0 22 _4kWQm6A`YV8c_@OdCBKj3
+32
+Mx1 17 __model_tech/ieee 14 std_logic_1164
+l11
+L9
+Z16 VGliT8YLk>l9d3Ie75j@[[1
+R13
+R14
+Z17 !s100 BZN?8gO?E97E5Y5MiXNR31
