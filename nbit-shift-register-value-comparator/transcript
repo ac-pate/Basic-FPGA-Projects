@@ -9,7 +9,6 @@
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do comparator.do registers_min_max 
-# ** Error: lock failed. Retrying 1 times, errno 11
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
@@ -23,3 +22,7 @@
 #    Time: 10 ns  Iteration: 0  Instance: /registers_min_max
 # 
 #  
+# Debug data file, vsim.dbg, does not exist.
+# 
+# Invoke vsim with -debugDB to create this file.
+# Optimization canceled
