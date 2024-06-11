@@ -8,13 +8,23 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do d-ff.do d_flipflop 
+# vsim -do shift-reg.do shift_reg 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.d_flipflop(behavioral)#1
-# do d-ff.do 
+# Loading work.shift_reg(shiftreg)#1
+# do shift-reg.do 
+# ** Error: (vish-4008) Object '/shift_reg/set' not found.
+# Error in macro ./shift-reg.do line 32
+# ** Error: (vish-4008) Object '/shift_reg/set' not found.
+# 
+#     while executing
+# "vsimcmd::force /shift_reg/set 1"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel vsimcmd::force $args"
+#     (procedure "force" line 13)
+#     invoked from within
+# "force /shift_reg/set 1"
 # 
 #  
-# ** Warning: (vsim-31) Unable to unlink file "/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/d-flipflop/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)

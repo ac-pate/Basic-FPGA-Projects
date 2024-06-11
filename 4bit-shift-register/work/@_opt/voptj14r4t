@@ -1,0 +1,37 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/4bit-shift-register
+T_opt
+Z1 VkN^Z6IJl3oVNUWn6LX4]G1
+Z2 04 9 8 work shift_reg shiftreg 1
+Z3 =1-c8d9d21ef67b-6664028a-6c800-667b
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6g;45
+Z7 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/4bit-shift-register
+Eshift_reg
+Z8 w1717830268
+Z9 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z10 84bit-shift-register.vhd
+Z11 F4bit-shift-register.vhd
+l0
+L4
+Z12 Vk67L5=^6RT7Yb_hHoKm]b1
+Z13 OL;C;6.6g;45
+Z14 tExplicit 1
+Z15 !s100 jMm[WO4804[ic2GjO3jRg1
+Ashiftreg
+R9
+DEx72 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/4bit-shift-register/work 9 shift_reg 0 22 k67L5=^6RT7Yb_hHoKm]b1
+32
+Mx1 17 __model_tech/ieee 14 std_logic_1164
+l15
+L13
+Z16 Vl6z9@Z2bzW8A7I0k^AUf]2
+R13
+R14
+Z17 !s100 NC>ZTj1efe7GLEONQ3;DR2
