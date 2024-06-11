@@ -1,0 +1,57 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/shift-register-value-comparator
+T_opt
+Z1 VaGFUWlVjSO9JZimjlGTUZ2
+Z2 04 17 10 work registers_min_max behavioral 1
+Z3 =1-c8d9d21ef67b-66680347-5eba6-479b
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6g;45
+Z7 d/home/a/ac_pate/COEN313/Basic-FPGA-Projects/shift-register-value-comparator
+T_opt1
+Z8 V^ai]Bo]Ba1_njflTSUAC42
+R2
+Z9 =1-c8d9d21ef67b-66680559-210dc-4a07
+R4
+Z10 n@_opt1
+R6
+R7
+Eregisters_min_max
+Z11 w1718093130
+Z12 DPx17 __model_tech/ieee 9 math_real 0 22 zjAF7SKfg_RPI0GT^n1N`1
+Z13 DPx17 __model_tech/ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z14 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z15 DPx17 __model_tech/ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z16 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R7
+Z17 8nbit_comparator.vhd
+Z18 Fnbit_comparator.vhd
+l0
+L7
+Z19 V:HDcG3;O<h190`RL7?88E2
+Z20 OL;C;6.6g;45
+Z21 tExplicit 1
+Z22 !s100 F7ZfGXiRNeG4Cdb1nn=^21
+Abehavioral
+R12
+R13
+R14
+R15
+R16
+DEx84 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/shift-register-value-comparator/work 17 registers_min_max 0 22 :HDcG3;O<h190`RL7?88E2
+32
+Mx5 17 __model_tech/ieee 14 std_logic_1164
+Mx4 17 __model_tech/ieee 18 std_logic_unsigned
+Mx3 17 __model_tech/ieee 15 std_logic_arith
+Mx2 17 __model_tech/ieee 11 numeric_std
+Mx1 17 __model_tech/ieee 9 math_real
+l26
+L22
+Z23 VGTPP8<_oeo]hKYlme^55A3
+R20
+R21
+Z24 !s100 Ld8Ycn`k_AMFIdM<I;BAL0
