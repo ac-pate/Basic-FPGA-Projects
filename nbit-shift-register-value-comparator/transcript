@@ -9,20 +9,22 @@
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do comparator.do registers_min_max 
+# ** Error: lock failed. Retrying 1 times, errno 11
+# ** Error: lock failed. Retrying 2 times, errno 11
+# ** Error: lock failed. Retrying 3 times, errno 11
+# ** Error: lock failed. Give up retry 3, errno 11
+# ** Error: Cannot lock WLF file: vsim.wlf
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlftVMGCLA".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftVMGCLA
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading work.registers_min_max(behavioral)#1
+# Loading work.registers_min_max(rtl)#1
 # do comparator.do 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 0  Instance: /registers_min_max
 # 
 #  
-# Debug data file, vsim.dbg, does not exist.
-# 
-# Invoke vsim with -debugDB to create this file.
-# Optimization canceled

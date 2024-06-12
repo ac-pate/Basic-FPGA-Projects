@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
 
 entity registers_min_max is
     port( 
@@ -25,10 +25,10 @@ begin
     process(clk, reset)
     begin
         if reset = '1' then
-            R0 <= (others => '0');  -- Reset all registers to 0
-            R1 <= (others => '0');
-            R2 <= (others => '0');
-            R3 <= (others => '0');
+            R0 <= "1000";  -- Reset all registers to a specific value
+            R1 <= "1000";
+            R2 <= "1000";
+            R3 <= "1000";
         elsif rising_edge(clk) then
             R0 <= din;            
             R1 <= R0;             
@@ -62,27 +62,27 @@ begin
         end if;
     end process;
 
-    -- output registers and multiplexer
-    process(clk)
+    -- Output multiplexer
+    process(sel, R0, R1, R2, R3)
     begin
-        if rising_edge(clk) then
-            if reset = '1' then
-                max_out <= (others => '0');  -- reset output registers
-                min_out <= (others => '0');
-                reg_out <= (others => '0');
-            else
-                case sel is
-                    when "00" => reg_out <= R0;
-                    when "01" => reg_out <= R1;
-                    when "10" => reg_out <= R2;
-                    when "11" => reg_out <= R3;
-                    when others => reg_out <= (others => '0');  
-                end case;
+        case sel is
+            when "00" => reg_out <= R0;
+            when "01" => reg_out <= R1;
+            when "10" => reg_out <= R2;
+            when "11" => reg_out <= R3;
+            when others => reg_out <= (others => '0');  
+        end case;
+    end process;
 
-		-- Update max/min output registers
-                max_out <= max_val;  
-                min_out <= min_val;
-            end if;
+    -- Output registers
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            max_out <= "0000";
+            min_out <= "1111";
+        elsif rising_edge(clk) then
+            max_out <= max_val;  
+            min_out <= min_val;
         end if;
     end process;
 

@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jun 11 17:55:14 2024
+# Process ID: 8562
+# Current directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter
+# Command line: vivado
+# Log file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/vivado.log
+# Journal file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+synth_design -rtl -name rtl_1
+write_schematic -format pdf -orientation portrait /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/schematic.pdf
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/impl_1/converter.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/impl_1/converter.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+write_schematic -format pdf -orientation portrait -force /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/schematic.pdf

@@ -1,0 +1,23 @@
+# //  ModelSim SE-64 6.6g May 23 2012 Linux 3.10.0-1160.118.1.el7.x86_64
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do test.do reg_swap_load 
+# ** Error: lock failed. Retrying 1 times, errno 11
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.reg_swap_load(behavioral)#1
+# do test.do 
+# 
+#  
+cause the modal window "Quit Vsim" is still open.

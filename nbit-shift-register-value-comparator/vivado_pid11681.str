@@ -1,0 +1,1465 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 11681
+License: Customer
+
+Current time: 	Tue Jun 11 18:09:13 EDT 2024
+Time zone: 	Eastern Standard Time (America/Montreal)
+
+OS: Scientific Linux release 7.9 (Nitrogen)
+OS Version: 3.10.0-1160.118.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 18 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ac_pate
+User home directory: /nfs/home/a/ac_pate
+User working directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado
+HDI_APPROOT: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+RDI_DATADIR: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/data
+RDI_BINDIR: /nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/a/ac_pate/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/a/ac_pate/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /nfs/home/a/ac_pate/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/nfs/sw_cmc/x86_64.EL7/tools/xilinx/Vivado_2018.2/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/vivado.log
+Vivado journal file location: 	/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-11681-eridanus.encs.concordia.ca
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 6062@license-cadpass.encs.concordia.ca:6088@license-cadpass.encs.concordia.ca
+XILINX_DSP: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+XILINX_SDK: /CMC/tools/xilinx/Vivado_2018.2/SDK/2018.2
+XILINX_VIVADO: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+XILINX_VIVADO_HLS: /CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2
+
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 5,017 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 75 MB (+76356kb) [00:00:04]
+// [Engine Memory]: 4,960 MB (+5049514kb) [00:00:04]
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // x (w, ck)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// [GUI Memory]: 84 MB (+5607kb) [00:00:06]
+// f (ck): New Project: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 5,025 MB. GUI used memory: 40 MB. Current time: 6/11/24 6:09:14 PM EDT
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// Elapsed time: 10 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "comparator"); // X (Q, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, f)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,042 MB. GUI used memory: 40 MB. Current time: 6/11/24 6:09:34 PM EDT
+// Elapsed time: 26 seconds
+setFileChooser("/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/nbit_comparator.vhd");
+selectButton("NEXT", "Next >"); // JButton (j, f)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, f)
+// Elapsed time: 350 seconds
+setFileChooser("/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator.xdc");
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// Elapsed time: 23 seconds
+selectButton(PAResourceEtoH.FPGAChooser_RESET_ALL_FILTERS, "Reset All Filters"); // h (B, f)
+selectComboBox(PAResourceEtoH.FPGAChooser_FAMILY, "Artix-7", 1); // u (B, f)
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7a100tcsg324-1"); // OverlayTextField (G, f)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7a100tcsg324-1 ; 324 ; 210 ; 63400 ; 126800 ; 135 ; 0 ; 240 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 1 ; 6 ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 0, "xc7a100tcsg324-1", 0); // v (O, f)
+selectButton("NEXT", "Next >"); // JButton (j, f)
+// bx (f):  Create Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project comparator /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator -part xc7a100tcsg324-1 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property target_language VHDL [current_project] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/nbit_comparator.vhd 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -force -norecurse 
+// Tcl Message: INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1' 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset constrs_1 -force -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator.xdc 
+selectButton("FINISH", "Finish"); // JButton (j, f)
+// 'g' command handler elapsed time: 446 seconds
+dismissDialog("Create Project"); // bx (f)
+dismissDialog("New Project"); // f (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,099 MB. GUI used memory: 42 MB. Current time: 6/11/24 6:16:39 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 18:16:45 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1068ms to process. Increasing delay to 2000 ms.
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 70 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 18:17:58 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,145 MB. GUI used memory: 43 MB. Current time: 6/11/24 6:17:59 PM EDT
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 76 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, ck)
+// [GUI Memory]: 90 MB (+1985kb) [00:10:08]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 26, false); // u (O, ck)
+// bx (ck):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a100tcsg324-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,215 MB. GUI used memory: 43 MB. Current time: 6/11/24 6:19:24 PM EDT
+// [Engine Memory]: 5,221 MB (+13471kb) [00:10:21]
+// TclEventType: READ_XDC_FILE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 5,413 MB. GUI used memory: 43 MB. Current time: 6/11/24 6:19:49 PM EDT
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 5,414 MB. GUI used memory: 43 MB. Current time: 6/11/24 6:19:49 PM EDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 5,529 MB (+49118kb) [00:10:43]
+// [GUI Memory]: 96 MB (+1231kb) [00:10:43]
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.2 INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// ExpRunCommands.openSynthResults elapsed time: 32.9s
+// Tcl Message: open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 6742.434 ; gain = 409.203 ; free physical = 8267 ; free virtual = 20463 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 33 seconds
+dismissDialog("Open Synthesized Design"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 18:20:00 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,637 MB. GUI used memory: 74 MB. Current time: 6/11/24 6:20:09 PM EDT
+// [Engine Memory]: 5,876 MB (+74618kb) [00:11:22]
+// RouteApi::initDelayMediator elapsed time: 38.4s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// HMemoryUtils.trashcanNow. Engine heap size: 5,876 MB. GUI used memory: 74 MB. Current time: 6/11/24 6:20:29 PM EDT
+// [GUI Memory]: 103 MB (+2350kb) [00:11:39]
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 98 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// [GUI Memory]: 113 MB (+5156kb) [00:12:34]
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,921 MB. GUI used memory: 77 MB. Current time: 6/11/24 6:21:44 PM EDT
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:18:37     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// [Engine Memory]: 6,487 MB (+331717kb) [00:12:39]
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF554A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0). 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 4 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 18 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_REFRESH_DEVICE, "Refresh device"); // h (cM, ck)
+selectMenuItem((HResource) null, "xc7a100t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_REFRESH_DEVICE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 6 seconds
+dismissDialog("Program Device"); // bx (ck)
+// [GUI Memory]: 120 MB (+850kb) [00:17:23]
+// Elapsed time: 285 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 263, 47); // dn (ae, ck)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 374, 39); // dn (ae, ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_DEBUG_PROBES_FILE, (String) null); // q (ak, bB)
+dismissFileChooser();
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 11 seconds
+dismissDialog("Program Device"); // bx (ck)
+// [GUI Memory]: 127 MB (+748kb) [00:26:44]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,495 MB. GUI used memory: 78 MB. Current time: 6/11/24 6:51:44 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 6,495 MB. GUI used memory: 75 MB. Current time: 6/11/24 7:21:44 PM EDT
+// Elapsed time: 3394 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, ck)
+// A (ck): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (ck):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // A (ck)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: registers_min_max 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 6,770 MB. GUI used memory: 76 MB. Current time: 6/11/24 7:24:03 PM EDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 7753.676 ; gain = 62.992 ; free physical = 5925 ; free virtual = 18273 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'registers_min_max' [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:22] 
+// Tcl Message: 	Parameter WIDTH bound to: 4 - type: integer  
+// Tcl Message: INFO: [Synth 8-226] default block is never used [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:65] INFO: [Synth 8-256] done synthesizing module 'registers_min_max' (1#1) [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:22] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5940 ; free virtual = 18288 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5939 ; free virtual = 18287 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5939 ; free virtual = 18287 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7990.027 ; gain = 299.344 ; free physical = 5817 ; free virtual = 18165 
+// Tcl Message: 6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7990.027 ; gain = 299.344 ; free physical = 5817 ; free virtual = 18165 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+dismissDialog("Open Elaborated Design"); // bx (ck)
+// [GUI Memory]: 135 MB (+1933kb) [01:14:58]
+// Elapsed time: 266 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 37, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 36 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "XADC ;   ", 3, "XADC", 0, false); // t (O, ck)
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "xc7a100t_0 (1) ; Programmed", 2, "xc7a100t_0 (1)", 0, true); // t (O, ck) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "localhost (1) ; Connected", 0, "localhost (1)", 0, true); // t (O, ck) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+dismissDialog("Add Sources"); // c (ck)
+// Elapsed time: 12 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // V (q, ck)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // V (q, ck)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// [GUI Memory]: 142 MB (+815kb) [01:20:49]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // B (D, ck) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ck)
+// Elapsed time: 386 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (ck): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Run Synthesis"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+// 'k' command handler elapsed time: 9 seconds
+dismissDialog("Launch Runs"); // f (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "comparator.xdc", 3); // k (j, ck)
+// [GUI Memory]: 150 MB (+790kb) [01:28:07]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(behavioral) (nbit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ck) - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(behavioral) (nbit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(behavioral) (nbit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(behavioral) (nbit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(behavioral) (nbit_comparator.vhd)]", 1, false); // B (D, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("nbit_comparator.vhd", 274, 154); // ce (w, ck)
+typeControlKey((HResource) null, "nbit_comparator.vhd", 'v'); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,809 MB. GUI used memory: 87 MB. Current time: 6/11/24 7:37:50 PM EDT
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 6,825 MB (+14676kb) [01:28:44]
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (nbit_comparator.vhd)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (nbit_comparator.vhd)]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (nbit_comparator.vhd)]", 2, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 19:38:13 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("comparator.xdc", 255, 98); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cM, ck)
+// bx (ck):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 8042.051 ; gain = 0.000 ; free physical = 5632 ; free virtual = 17994 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,861 MB. GUI used memory: 89 MB. Current time: 6/11/24 7:39:15 PM EDT
+// Engine heap size: 6,864 MB. GUI used memory: 90 MB. Current time: 6/11/24 7:39:15 PM EDT
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'registers_min_max' [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:17] 
+// Tcl Message: INFO: [Synth 8-226] default block is never used [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:74] INFO: [Synth 8-256] done synthesizing module 'registers_min_max' (1#1) [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:17] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8045.059 ; gain = 3.008 ; free physical = 5651 ; free virtual = 18013 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8053.258 ; gain = 11.207 ; free physical = 5651 ; free virtual = 18013 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8053.258 ; gain = 11.207 ; free physical = 5651 ; free virtual = 18013 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 6,913 MB. GUI used memory: 82 MB. Current time: 6/11/24 7:39:15 PM EDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Schematic: addNotify
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8132.812 ; gain = 90.762 ; free physical = 5646 ; free virtual = 18008 
+dismissDialog("Reloading"); // bx (ck)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 19:39:30 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 70 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 19:40:43 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 120 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 5 seconds
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 19:42:51 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 125 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 95, 121); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 624, 152); // n (q, ck)
+typeControlKey(PAResourceItoN.LogMonitor_MONITOR, "Monitor", 'c'); // n (q, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("comparator.xdc", 552, 97); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 552, 97, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("comparator.xdc", 552, 97); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 552, 97); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 408, 42); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 409, 46); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 545, 101); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 573, 147); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 574, 191); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 573, 195); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 579, 220); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 581, 239); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 582, 272); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 577, 292); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 595, 351); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 591, 375); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 586, 362); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 591, 392); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 588, 352); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 593, 365); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 590, 382); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 589, 392); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 590, 396); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 597, 419); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 591, 427); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 594, 439); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 19:46:06 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 103 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 19:47:52 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 74 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 210, 52); // n (q, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 444, 73); // n (q, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 40 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 19:49:59 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 101 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "4bit_comparator.vhd", 4); // k (j, ck)
+selectCodeEditor("4bit_comparator.vhd", 149, 231); // ce (w, ck)
+// Elapsed time: 37 seconds
+selectCodeEditor("4bit_comparator.vhd", 79, 137); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("4bit_comparator.vhd", 118, 78); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 120, 79, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 111, 176); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("4bit_comparator.vhd", 584, 187); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 200, 281); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 86, 73); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 86, 73, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 86, 73); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 115, 92); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 114, 92, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 112, 83); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 112, 83, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("4bit_comparator.vhd", 133, 87); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 133, 87, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 170, 79); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 170, 79, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 108, 104); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 679 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectCodeEditor("4bit_comparator.vhd", 667, 70, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, ck)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ad (aj, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, ck)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, ck)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+setFileChooser("/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd");
+// 'dH' command handler elapsed time: 7 seconds
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_files -from_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd -to_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd' with file '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd'. INFO: [filemgmt 20-1080] Importing file from '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd' to '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd'. 
+// TclEventType: FILE_SET_CHANGE
+// bx (ck):  Replace File : addNotify
+dismissDialog("Replace File"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // h (cM, ck)
+// Synthesis and Implementation Out-of-date Due to: show
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k (n, ResizableWindow)
+// Synthesis and Implementation Out-of-date Due to: hide
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 18, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 20:06:30 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 70 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (ck):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Tue Jun 11 20:07:42 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (ck)
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 6,947 MB. GUI used memory: 92 MB. Current time: 6/11/24 8:09:20 PM EDT
+// TclEventType: RUN_COMPLETED
+// ah (ck): Implementation Completed: addNotify
+// Elapsed time: 162 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 20:10:29 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 54 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("4bit_comparator.vhd", 789, 140); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 545, 94); // n (q, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("4bit_comparator.vhd", 85, 415); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", -49, 74, false, false, true, false, false); // ce (w, ck) - Alt Key
+selectCodeEditor("4bit_comparator.vhd", 261, 168); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 69, 158); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 22, 143); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("4bit_comparator.vhd", 136, 409); // ce (w, ck)
+typeControlKey((HResource) null, "4bit_comparator.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 50 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 934, 137); // n (q, ck)
+selectCodeEditor("4bit_comparator.vhd", 126, 297); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 133, 293); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 314, 167, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ad (aj, Popup.HeavyWeightWindow)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 6,963 MB. GUI used memory: 91 MB. Current time: 6/11/24 8:14:25 PM EDT
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 36, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 20:14:35 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log [Tue Jun 11 20:14:35 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 202 seconds
+selectCheckBox(PAResourceCommand.PACommandNames_LOG_WINDOW, "View Log", false); // g (Q, ah): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 475, 132); // n (q, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 37, 99, false, false, false, true, false); // n (q, ck) - Popup Trigger
+selectMenuItem(PAResourceItoN.LogMonitor_COPY, "Copy"); // ad (aj, Popup.HeavyWeightWindow)
+// Elapsed time: 38 seconds
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 235, 107); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 235, 107); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 235, 107, false, false, false, false, true); // n (q, ck) - Double Click
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 235, 107); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 1315, 86); // n (q, ck)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, comparator.xdc]", 4, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("4bit_comparator.vhd", 410, 193); // ce (w, ck)
+typeControlKey((HResource) null, "4bit_comparator.vhd", 'c'); // ce (w, ck)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 80 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 34, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// e (ck): Close Design: addNotify
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a (e)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 6,963 MB. GUI used memory: 88 MB. Current time: 6/11/24 8:21:33 PM EDT
+// Engine heap size: 6,963 MB. GUI used memory: 89 MB. Current time: 6/11/24 8:21:33 PM EDT
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// bx (ck):  Open Implemented Design : addNotify
+// Tcl Message: close_design 
+dismissDialog("Close Design"); // e (ck)
+// Tcl Message: open_run impl_1 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 6,966 MB. GUI used memory: 86 MB. Current time: 6/11/24 8:21:34 PM EDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8158.820 ; gain = 0.000 ; free physical = 6995 ; free virtual = 19415 
+// Tcl Message: Restored from archive | CPU: 0.010000 secs | Memory: 0.104248 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8158.820 ; gain = 0.000 ; free physical = 6995 ; free virtual = 19415 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// 'dP' command handler elapsed time: 5 seconds
+dismissDialog("Open Implemented Design"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 45, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectCodeEditor("comparator.xdc", 1, 14); // ce (w, ck)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "comparator.xdc", 'c'); // ce (w, ck)
+// [GUI Memory]: 160 MB (+2819kb) [02:13:27]
+// Elapsed time: 105 seconds
+selectCodeEditor("comparator.xdc", 430, 12); // ce (w, ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("comparator.xdc", 1101, 431); // ce (w, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 181, 83); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 579, 113); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 726, 85); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 735, 78); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 735, 78, false, false, false, false, true); // n (q, ck) - Double Click
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 735, 78); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 721, 57); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 712, 40); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 711, 39, false, false, false, false, true); // n (q, ck) - Double Click
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 690, 70); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 689, 75); // n (q, ck)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 676, 95); // n (q, ck)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, registers_min_max(rtl) (4bit_comparator.vhd)]", 1, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 36 seconds
+selectCodeEditor("4bit_comparator.vhd", 1044, 377); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 124, 209); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 130, 236); // ce (w, ck)
+typeControlKey((HResource) null, "4bit_comparator.vhd", 'v'); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: current_design synth_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 47, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 8 seconds
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 170 MB (+1458kb) [02:17:02]
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 20:26:09 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log [Tue Jun 11 20:26:09 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// bx (ck):  Generate Bitstream : addNotify
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 189 seconds
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+// Elapsed time: 25 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is max_val[0]. Please evaluate your design. The cells in the loop are: max_out[0]_i_1, max_out[0]_i_2, max_out[1]_i_1, max_out[1]_i_2, max_out[1]_i_3, max_out[1]_i_4, max_out[2]_i_1, max_out[2]_i_2, max_out[3]_i_1, max_out[3]_i_2, max_out[3]_i_3, max_out[3]_i_4, max_out[3]_i_5, max_out[3]_i_6, max_out[3]_i_7... and (the first 15 of 18 listed).. ]", 6, true); // ah (O, ck) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "comparator.xdc", 4); // k (j, ck)
+selectCodeEditor("comparator.xdc", 117, 37); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 115, 38, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("comparator.xdc", 236, 96); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 237, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("comparator.xdc", 243, 141); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 243, 141, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("comparator.xdc", 507, 265); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 246, 109); // ce (w, ck)
+selectCodeEditor("comparator.xdc", 246, 109, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "4bit_comparator.vhd", 3); // k (j, ck)
+selectCodeEditor("4bit_comparator.vhd", 88, 106); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 103, 110); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 103, 110, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("4bit_comparator.vhd", 80, 108); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 80, 107); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("4bit_comparator.vhd", 190, 170); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 192, 163); // ce (w, ck)
+// Elapsed time: 128 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop]", 5, true); // ah (O, ck) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is max_val[0]. Please evaluate your design. The cells in the loop are: max_out[0]_i_1, max_out[0]_i_2, max_out[1]_i_1, max_out[1]_i_2, max_out[1]_i_3, max_out[1]_i_4, max_out[2]_i_1, max_out[2]_i_2, max_out[3]_i_1, max_out[3]_i_2, max_out[3]_i_3, max_out[3]_i_4, max_out[3]_i_5, max_out[3]_i_6, max_out[3]_i_7... and (the first 15 of 18 listed).. ]", 6, true); // ah (O, ck) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is max_val[0]. Please evaluate your design. The cells in the loop are: max_out[0]_i_1, max_out[0]_i_2, max_out[1]_i_1, max_out[1]_i_2, max_out[1]_i_3, max_out[1]_i_4, max_out[2]_i_1, max_out[2]_i_2, max_out[3]_i_1, max_out[3]_i_2, max_out[3]_i_3, max_out[3]_i_4, max_out[3]_i_5, max_out[3]_i_6, max_out[3]_i_7... and (the first 15 of 18 listed).. ]", 6, true, false, false, false, true, false); // ah (O, ck) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // aa (K, ck)
+selectCodeEditor("4bit_comparator.vhd", 148, 391); // ce (w, ck)
+// [GUI Memory]: 181 MB (+3055kb) [02:24:05]
+// Elapsed time: 95 seconds
+selectCodeEditor("4bit_comparator.vhd", 1020, 135); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 499, 165); // ce (w, ck)
+selectCodeEditor("4bit_comparator.vhd", 504, 161, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ad (aj, Popup.HeavyWeightWindow)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 47, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 20:34:52 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log [Tue Jun 11 20:34:52 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 195 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectCheckBox(PAResourceItoN.MsgView_ERROR_MESSAGES, (String) null, true); // g (aQ, ck): TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is max_out[3]_i_2_n_0. Please evaluate your design. The cells in the loop are: max_out[3]_i_2.. ]", 6, true); // ah (O, ck) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Netlist, Design Level, Combinatorial Loop, [DRC LUTLP-1] Combinatorial Loop Alert: 1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is max_out[3]_i_2_n_0. Please evaluate your design. The cells in the loop are: max_out[3]_i_2.. ]", 6, true, false, false, false, true, false); // ah (O, ck) - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // aa (K, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("4bit_comparator.vhd", 1077, 162); // ce (w, ck)
+// Elapsed time: 37 seconds
+selectCodeEditor("4bit_comparator.vhd", 256, 324); // ce (w, ck)
+typeControlKey((HResource) null, "4bit_comparator.vhd", 'v'); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 47, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Jun 11 20:39:29 2024] Launched synth_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log [Tue Jun 11 20:39:29 2024] Launched impl_1... Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 7,029 MB. GUI used memory: 107 MB. Current time: 6/11/24 8:39:30 PM EDT
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 195 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// aI (ck): Feedback Request: addNotify
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_NO, "No"); // a (aI)
+// HMemoryUtils.trashcanNow. Engine heap size: 7,045 MB. GUI used memory: 109 MB. Current time: 6/11/24 8:42:50 PM EDT
+dismissDialog("Feedback Request"); // aI (ck)
+selectButton("PAResourceTtoZ.TouchpointSurveyDialog_USE_TOOLS_OPTIONS_WINDOWS_BEHAVIOR_OK", "OK"); // JButton (A, G)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF554A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/lab4.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+selectButton(PAResourceOtoP.ProgramDebugTab_REFRESH_DEVICE, "Refresh device"); // h (cM, ck)
+selectMenuItem((HResource) null, "xc7a100t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_REFRESH_DEVICE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/lab4.bit} [get_hw_devices xc7a100t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a100t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 266 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, true); // g (aQ, ck): TRUE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF554A 
+// n (ck): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 165 seconds
+dismissDialog("Close Hardware Target"); // n (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 42, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify

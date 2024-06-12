@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jun 11 19:12:48 2024
+# Process ID: 24020
+# Current directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/test/test/test.runs/impl_1
+# Command line: vivado -log reg_swap_load.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reg_swap_load.tcl -notrace
+# Log file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/test/test/test.runs/impl_1/reg_swap_load.vdi
+# Journal file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/test/test/test.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source reg_swap_load.tcl -notrace

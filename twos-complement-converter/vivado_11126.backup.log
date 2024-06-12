@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 28 20:22:41 2024
+# Process ID: 11126
+# Current directory: /nfs/home/a/ac_pate/COEN313/mylab3/code
+# Command line: vivado
+# Log file: /nfs/home/a/ac_pate/COEN313/mylab3/code/vivado.log
+# Journal file: /nfs/home/a/ac_pate/COEN313/mylab3/code/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project lab3 /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3 -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/data/ip'.
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 6277.969 ; gain = 51.863 ; free physical = 11960 ; free virtual = 23640
+set_property target_language VHDL [current_project]
+add_files -norecurse /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3_var.vhd
+import_files -force -norecurse
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+import_files -fileset constrs_1 -force -norecurse /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3.xdc
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Tue May 28 20:26:02 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Tue May 28 20:27:21 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 28 20:29:37 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/impl_1/runme.log
+open_hw
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue May 28 20:31:37 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/mylab3/code/lab3/lab3.runs/impl_1/runme.log
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:18:37
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF4C3A
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 7100.090 ; gain = 162.711 ; free physical = 11135 ; free virtual = 22908
+INFO: [Common 17-344] 'open_run' was cancelled
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 0.010000 secs | Memory: 0.022865 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7664.137 ; gain = 0.000 ; free physical = 10631 ; free virtual = 22405
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:39 . Memory (MB): peak = 7664.137 ; gain = 564.047 ; free physical = 10731 ; free virtual = 22504
+INFO: [Common 17-344] 'open_run' was cancelled
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF4C3A

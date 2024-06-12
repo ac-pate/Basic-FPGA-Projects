@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jun 11 18:08:56 2024
+# Process ID: 11681
+# Current directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator
+# Command line: vivado
+# Log file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/vivado.log
+# Journal file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project comparator /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/CMC/tools/xilinx/Vivado_2018.2/Vivado/2018.2/data/ip'.
+set_property target_language VHDL [current_project]
+add_files -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/nbit_comparator.vhd
+import_files -force -norecurse
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+import_files -fileset constrs_1 -force -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator.xdc
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Tue Jun 11 18:16:45 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Tue Jun 11 18:17:58 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 6742.434 ; gain = 409.203 ; free physical = 8267 ; free virtual = 20463
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jun 11 18:20:00 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:18:37
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF554A
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: registers_min_max
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 7753.676 ; gain = 62.992 ; free physical = 5925 ; free virtual = 18273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'registers_min_max' [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:22]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'registers_min_max' (1#1) [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5940 ; free virtual = 18288
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5939 ; free virtual = 18287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 7786.941 ; gain = 96.258 ; free physical = 5939 ; free virtual = 18287
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7990.027 ; gain = 299.344 ; free physical = 5817 ; free virtual = 18165
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7990.027 ; gain = 299.344 ; free physical = 5817 ; free virtual = 18165
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/registers_min_max.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+import_files -norecurse /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd] -no_script -reset -force -quiet
+remove_files  /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/nbit_comparator.vhd
+launch_runs synth_1 -jobs 2
+[Tue Jun 11 19:38:13 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 8042.051 ; gain = 0.000 ; free physical = 5632 ; free virtual = 17994
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'registers_min_max' [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:17]
+WARNING: [Synth 8-614] signal 'max_val' is read in the process but is not in the sensitivity list [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:41]
+WARNING: [Synth 8-614] signal 'min_val' is read in the process but is not in the sensitivity list [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:41]
+INFO: [Synth 8-226] default block is never used [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'registers_min_max' (1#1) [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8045.059 ; gain = 3.008 ; free physical = 5651 ; free virtual = 18013
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8053.258 ; gain = 11.207 ; free physical = 5651 ; free virtual = 18013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8053.258 ; gain = 11.207 ; free physical = 5651 ; free virtual = 18013
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+Finished Parsing XDC File [/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/constrs_1/imports/nbit-shift-register-value-comparator/comparator.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8132.812 ; gain = 90.762 ; free physical = 5646 ; free virtual = 18008
+launch_runs synth_1 -jobs 2
+[Tue Jun 11 19:39:30 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 19:40:43 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jun 11 19:42:51 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Jun 11 19:46:06 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 19:47:52 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jun 11 19:49:59 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+update_files -from_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd -to_files /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd' with file '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd'.
+INFO: [filemgmt 20-1080] Importing file from '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/4bit_comparator.vhd' to '/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.srcs/sources_1/imports/nbit-shift-register-value-comparator/4bit_comparator.vhd'.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Jun 11 20:06:30 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 20:07:42 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Jun 11 20:10:29 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 20:14:35 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+[Tue Jun 11 20:14:35 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8158.820 ; gain = 0.000 ; free physical = 6995 ; free virtual = 19415
+Restored from archive | CPU: 0.010000 secs | Memory: 0.104248 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8158.820 ; gain = 0.000 ; free physical = 6995 ; free virtual = 19415
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+current_design synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 20:26:09 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+[Tue Jun 11 20:26:09 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 20:34:52 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+[Tue Jun 11 20:34:52 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 11 20:39:29 2024] Launched synth_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/synth_1/runme.log
+[Tue Jun 11 20:39:29 2024] Launched impl_1...
+Run output will be captured here: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292ABF554A
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/lab4.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/nbit-shift-register-value-comparator/comparator/comparator.runs/impl_1/lab4.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF554A
