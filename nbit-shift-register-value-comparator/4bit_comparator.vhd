@@ -81,6 +81,7 @@ begin
             max_out <= "0000";
             min_out <= "1111";
         elsif rising_edge(clk) then
+
             max_out <= max_val;  
             min_out <= min_val;
         end if;

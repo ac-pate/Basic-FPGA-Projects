@@ -143,3 +143,5 @@ For more details on setting the scan chain property, consult the Vivado Debug an
 ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF554A
 write_schematic -format pdf -orientation portrait -force /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/schematic.pdf
 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/twos-complement-converter/schematic.pdf
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 11 20:52:13 2024...
