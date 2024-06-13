@@ -1,0 +1,82 @@
+     1                                  section .data
+     2                                  
+     3                                  ; put your data in this section using
+     4                                  ; db , dw, dd directions
+     5                                  
+     6                                  ; examples of db (DEFINE BYTE assembler directive )
+     7                                  
+     8 00000000 05                      num1 db 5 ; decimal number 5
+     9 00000001 A2                      num2 db 0xa2 ; hexadecimal
+    10 00000002 A2                      num3 db 0a2h ; alternative form of specifying hexadecimal notation
+    11 00000003 A2                      num4 db $0a2 ; hex yet again, the leading 0 IS REQUIRED 
+    12 00000004 A2                      num5 db 10100010b ; same number specified in binary
+    13                                  
+    14                                  ; examples of dw (DEFINE WORD assembler directive)
+    15                                  
+    16 00000005 4101                    num6 dw 321 ; decimal 321 as a WORD of memory = 2 BYTES
+    17 00000007 B62A                    num7 dw 0x2ab6 ; how will this word be stored in memory?
+    18                                                 ; which byte is stored first?
+    19                                  
+    20 00000009 B62A                    num8 dw 0010101010110110b ; same number as above but in binary
+    21                                  
+    22                                  ; examples of dd (DEFINE DOUBLEWORD assembler directive)
+    23                                  
+    24 0000000B 78563412                num9 dd 0x12345678  ; 4 bytes of memory required to store a double word
+    25                                  
+    26                                  ; we can even define ASCII characters and ASCII character strings
+    27                                  
+    28 0000000F 61                      letter db 'a'  ; ASCII code for 'a' will be stored in memory location letter
+    29 00000010 62636465                more_letters db 'b','c','d','e'  ; if more than one letter, separate with commas
+    30 00000014 6B65697468              keith1 db 'keith' ; a character string is enclosed in single quotes
+    31 00000019 6D69636B                mick db 'mick'  ; another string
+    32                                  
+    33                                  section .bss
+    34                                  
+    35                                  ; put UNINITIALIZED data here using
+    36                                  ; sum resb 5 format (read as sum reserve bytes 5 
+    37                                  
+    38                                  
+    39 00000000 <res Ah>                num10 resb 10 ; reserve 10 bytes
+    40 0000000A ????????                num11 resw 2 ; reserve 2 words
+    41                                   
+    42                                  section .text
+    43                                          global _start
+    44                                  
+    45                                  _start:
+    46                                    ; put your code here
+    47 00000000 B8[00000000]            keith:        mov eax, num1 ;  IMMEDIATE 
+    48                                  
+    49                                  ; register eax is loaded with the address of memory location
+    50                                  ; symboloically referred to by 'num1'
+    51                                  ; the assembler will convert the symbol 'num1' into some physical
+    52                                  ; memory address at assemble time.
+    53                                  
+    54 00000005 BB00000000              ron:        mov ebx, 0x0000
+    55                                  
+    56                                  ; another form of IMMEDIATE addressing this time using 
+    57                                  ; a numeric constant specified in hexadecimal as opposed
+    58                                  ; to a symbolic label num1 in the above instruction
+    59                                  
+    60 0000000A 89D9                    mov ecx, ebx   ; REGISTER addressing 
+    61                                  
+    62                                  ; the data is found in the register
+    63                                  
+    64 0000000C 8A18                    mov bl, [eax] ;  REGISTER INDIRECT addressing
+    65                                  
+    66                                  ; means go to the memory location
+    67                                  ;  pointed to by the contents of eax 
+    68                                  ;  bl gets loaded with number 5
+    69                                  
+    70 0000000E 8A0D[00000000]          mov cl, [num1] ;  DIRECT or ABSOLUTE addressing
+    71                                  
+    72                                  ;  cl will be loaded with the 1 byte of data found at memory 
+    73                                  ;  location num1, i.e. with the number 5
+    74                                  
+    75                                           
+    76                                    
+    77                                          ; 
+    78                                    
+    79 00000014 B801000000              mov eax,1            ; The system call for exit (sys_exit)
+    80 00000019 BB00000000              mov ebx,0            ; Exit with return code of 0 (no error)
+    81 0000001E CD80                    int 80h
+    82                                  

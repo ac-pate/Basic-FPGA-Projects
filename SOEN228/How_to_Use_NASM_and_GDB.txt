@@ -1,0 +1,754 @@
+ SOEN 228: Concise Guide to nasm, ld, and gdb
+
+Objectives:
+
+ - to review the method of connecting to an ENCS Linux server.
+ - review of basic Linux commands and text editing with 'nano'.
+   (the above were covered in Lab 0, the steps are included in this
+    lab for completeness and convenience).
+ - the true objectives of this lab is to gain familiarity with
+   using the 'nasm' assembler and the 'ld' loader to generate
+   an executable program from Intel x86 assembly language source
+   code and to learn to single-step through the program using the
+   gdb command line debugger.
+
+
+0. You must have the Concordia VPN installed if you are
+   connecting from a third-party Internet provider, if connecting
+   via Concordia Wi-Fi, the  Concordia VPN  is not needed.
+
+1. Connect to an ENCS Linux server using Putty (from Windows),
+   or ssh from a Linux or a Mac system.
+
+Linux and MacOS:
+
+The ssh command is used to connect your home computer
+to a university Linux server (there are several :
+login.encs.concordia.ca ,  computation.encs.concordia.ca ,
+and a few other which may be restricted acces. The server
+called 'login' is meant for short duration sessions, the
+'computation' server is meant to be used for long sessions
+which require significant amount of compute time). The following
+is the command to issue from your terminal prompt :
+
+ted@localhost ~]$    ssh -Y login.encs.concordia.ca -l ted
+-----------------           ----------------------  ------
+1.                               2.                    3.
+
+Comments
+
+1. This is my local  prompt, yours may appear 
+   different depending on how your account has
+   been setup by our system administrators. It
+   is NOT part of the command. In Linux, commands
+   are entered after the prompt (and then pressing the
+    Enter key).            
+
+
+2. the 'login.encs.concordia.ca' specifies the fully 
+    quantified domain name of the remote host you
+    wish to connect to
+
+3. the '-l user_name'   is used to specify the login 
+   name on the remote server. Otherwise, the default
+   is the login name on your home computer (which may
+   be differrent from your ENCS university login  name).
+
+
+After pressing the Enter key, you will see be prompted
+to enter your ENCS password:
+
+ted@login.encs.concordia.ca's password: (enter you password)
+
+The following will be displayed:
+
+Last login: Thu Jun  4 11:59:16 2020 from 142.169.78.157
+==========================================================================
+Gina Cody School of Engineering and Computer Science, Concordia University
+
+             Unauthorized access is strictly forbidden.
+
+For assistance: e-mail: servicedesk@encs.concordia.ca
+For information:   web: https://www.concordia.ca/ginacody/
+
+==========================================================================
+   -------------------------------------------------------------------
+   Wed May 20 2020
+
+   We will soon be updating the ssh server software on our systems
+   in order to keep up with security fixes, and as a result the host
+   keys will change.
+
+   Your ssh client software may advise you that the system you're
+   connecting to isn't the same as the system you meant to connect to.
+   In that case, you'll need to accept the new key presented by our
+   system before the software will continue connecting.  You will
+   need to do this for each of the systems that you connect to, though
+   there is no deadline for doing it for any system.  It will simply
+   need to be done the next time you connect to a system after its
+   host key has changed.
+
+   If you encounter issues, or have any questions or concerns about
+   this upcoming change, please send an email to help@concordia.ca
+   and we will do our best to assist.
+   -------------------------------------------------------------------
+
+
+ted@poise ~ 5:40pm >
+
+You are now logged into the ENCS Linux server and can issue commands
+and run programs  from the command line. 
+
+
+Windows:
+
+The Windows program Putty is a freely available (https://putty.org)
+SSH and Telnet client program. It lets one remotely connect to another
+computer, run applications on the remote computer, and have the results
+displayedon your local (home) Windows computer. To use Putty to establish
+a simple command line terminal session, download and install the Putty
+program then start Putty from Windows:
+
+In the Putty Configuration Window , specify an ENCS Linux
+server as the :
+
+  Specify the destination you want to connect to
+
+  Host Name (or IP address)                 Port
+  
+  login.encs.concordia.ca                    22 (leave as
+                                                 default setting
+                                                  of 22)
+
+  Connection Type
+
+   Raw      Telnet       Rlogin   X SSH    Serial
+
+                                 (leave SSH as the default
+                                  preconfigured connection type)
+
+
+                                      Open  (select Open at
+                                             the bottom of the
+                                             window)
+
+
+After you select Open, a message stating:
+
+"The server's host key is not cached in the registry. You will
+have ... "
+
+Simply, select Yes to this standard Security alert message.
+A terminal window will appear and you will be prompted
+to enter your ENCS login name , followed by your password.
+You are now logged into the ENCS Linux computer with your
+ENCS username.
+
+It is strongly recommended that you create a directory
+called SOEN228 to hold all your SOEN 228 related files,
+and a directory called NASM within your SOEN 228 directory
+to hold all your assembly language programs. The following
+Linux commands are used to do this:
+
+  mkdir  SOEN228
+  cd   SOEN228
+  mkdir NASM
+  cd NASM
+
+
+
+
+
+2. Use a Linux text editor to create an ASCII text file
+   containing:
+
+
+; Ted Obuchowicz  (replace with your name, this is a comment line)
+; June 3, 2020
+; sample program to add two numbers
+
+section .data
+
+; put your data in this section using
+; db , dw, dd directions
+; this program has nothing in the .data section
+
+section .bss
+
+; put UNINITIALIZED data here using
+; this program has nothing in the .bss section
+
+ 
+section .text
+        global _start
+
+_start:
+        mov ax,5  ; store 5 into the ax register
+keith:  mov bx,2  ; store 2 into the bx register
+        add ax,bx ; ax = ax + bx
+                  ; contents of register bx is added to the
+                  ; original contents of register ax and the
+                  ; result is stored in register ax (overwriting
+                  ; the original content
+ 
+
+        mov eax,1            ; The system call for exit (sys_exit)
+        mov ebx,0            ; Exit with return code of 0 (no error)
+        int 80h
+; end of program
+
+
+Save the file with a name of your choice with a filename extension
+of .asm. For example:  add_2_mumbers.asm or lab1.asm.
+
+
+Using a Linux text editor:
+
+The above assumed that the user is familiar with using
+a Linux text editor. For those unfamiliar with Linux
+and the available text editors, here is a very short
+guide to using the 'nano' Linux text editor.
+
+Any Linux text command line text editor can be used such
+as 'vi', 'emacs', 'nano', 'pico'. This example gives the
+basics of using the 'nano' text editor as it is easy and
+user-friendly:
+
+ted@willpower NASM 6:04pm >nano junk.txt
+
+After you press Enter, you will see on your terminal:
+
+  GNU nano 2.3.1              File: junk.txt                                    
+
+
+Start to type your code here.
+blah blah blah..
+you can use the  up, down, left, right
+arrows to move around in the fkile and use
+the Backspace and Delete keys.
+
+
+
+
+
+
+
+                                  [ New File ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
+
+
+
+
+
+To save the file, press the Ctrl and O keys simultaneosly.
+The name of the file (junk.txt) will be the default file
+name, you can specify another name if your wish and the
+contents of the file will be saved a file residing in the
+directory from where you invoked the nano text editor from.
+It is wise to save often, or else you may accidentally lose
+what you typed in.
+
+To exit from the text editor (after you have saved your file),
+press the  Ctrl and X  keys simulataneosly (this keystroke
+combination is shortened to 'Ctrl-X' ).
+
+
+
+Going back to our assembly language program,
+save the file with a name of your choice with a filename extension
+of .asm. For example:  add_2_mumbers.asm or lab1.asm.
+
+
+
+
+
+
+
+3. Assemble the file using the nasm assembler. In the examples
+   which follow, the portion:
+
+ted@willpower NASM 11:57am >  
+
+
+will be referred to as the (Linux) command prompt. Your command
+prompt may appear slightly different depending on how your 
+account has been set up by our system administrators.
+
+3.1: Verify that the assembler is installed on the system which
+     you have logged into by using the 'which' command:
+
+ted@willpower NASM 11:58am >which nasm
+/encs/bin/nasm
+ted@willpower NASM 12:01pm >
+
+
+You will note that the system responds by displaying the path
+to where the nasm program resides, and you are then returned
+to the command prompt.
+
+3.2: If desired, one may verify the version number of nasm :
+
+ted@willpower NASM 12:01pm >nasm -version
+NASM version 2.14.02 compiled on May 29 2019
+ted@willpower NASM 12:03pm >
+
+
+3.3: Assemble the source code using the nasm assembler:
+
+ted@willpower NASM 12:03pm >nasm -f elf add_2_numbers.asm -l add_2_numbers.lis
+
+ted@willpower 12:03pm >
+
+The -f elf  option to the assembler is used to specify that
+the output file format  (the default output file namde is obtained
+by prepending the input file name with a .o filename extension,
+in this case the output filename would be add_2_numbers.o ) should
+be a Linux "executable and linkable format". Many other output file
+formats exist. 
+
+The -l (the letter 'l') option is used to specify that a listing
+file with specified name is to be produded. A listing file is an
+ASCII text file containing the machine code of the program on the
+left hand side, and the original source code on the right hand side.
+
+If your assembly language source code contains no errors,
+the .o and .lis files will be written in the current directory.
+If your source code contains sytax errors, they will be shown in the
+terminal window:
+
+ted@willpower NASM 12:22pm >nasm -f elf bad.asm -l bad.lis
+bad.asm:21: error: parser: instruction expected
+
+
+The number 21 refers to the line number which caused the
+error to be generated. No listing and no output file is generated
+if the program does not assemble. If your assembly language source
+code contains errors, it is necessary to edit the file and correct
+the errors and then reassemble the source code.
+
+ If your assembly language source
+code contains errors, it is necessary to edit the file and correct
+the errors and then reassemble the source code.
+
+ If your assembly language source
+code contains errors, it is necessary to edit the file and correct
+the errors and then reassemble the source code.
+
+ If your assembly language source
+code contains errors, it is necessary to edit the file and correct
+the errors and then reassemble the source code.
+
+3.4: Using Linux commands to list directory contents.
+
+We will now use some useful Linux commands. The 'ls'
+command is used to list the contents of a directory (what
+Windows calls a folder). Type the following from your
+command prompt:
+
+ted@willpower NASM 12:25pm >ls -al add*
+-rw------- 1 ted ted  855 Jun  3 14:36 add_2_numbers.asm
+-rw------- 1 ted ted 2175 Jun  5 12:20 add_2_numbers.lis
+-rw------- 1 ted ted  576 Jun  5 12:20 add_2_numbers.o
+
+
+The '*' character at the end of the string 'add' is the
+Linux wildcard character. Its use in the given command will
+match any filename which resides in the directory starting with the
+letters add. Contrast this with the the :
+
+ted@willpower NASM 12:29pm >ls -al
+total 52
+drwx------  2 ted ted  4096 Jun  5 12:25 .
+drwx------ 19 ted ted  4096 Jun  3 14:17 ..
+-rw-------  1 ted ted   149 Jun  5 11:51 80.txt
+-rw-------  1 ted ted   855 Jun  3 14:36 add_2_numbers.asm
+-rw-------  1 ted ted  2175 Jun  5 12:20 add_2_numbers.lis
+-rw-------  1 ted ted   576 Jun  5 12:20 add_2_numbers.o
+-rw-------  1 ted ted   856 Jun  5 12:21 bad.asm
+-rw-------  1 ted ted  3702 Jun  5 12:25 lab1.txt
+-rw-------  1 ted ted 16384 Jun  5 12:32 .lab1.txt.swp
+-rw-------  1 ted ted   602 Jun  3 14:31 template.asm
+
+
+(your listing may appear different than the provided one as
+I have additional files in my directory).
+
+The Linux 'file' command is used to determine the type
+of the specified file:
+
+ted@willpower NASM 12:32pm >file add_2_numbers.asm
+add_2_numbers.asm: ASCII text
+
+
+ted@willpower NASM 12:33pm >file add_2_numbers.o
+add_2_numbers.o: ELF 32-bit LSB relocatable, Intel 80386, version 1 (SYSV), not stripped
+
+
+The Linux 'more' command is used to view the contents of an ASCII text
+file on the screen, one screenful at a time (and press the space
+bar to display the next screenful).  Use the 'more' command to
+view the contents of your .lis file:
+
+ted@willpower NASM 12:34pm >more add_2_numbers.lis
+     1                                  ; Ted Obuchowicz
+     2                                  ; June 3, 2020
+     3                                  ; sample program to add two numbers
+     4                                  
+     5                                  section .data
+     6                                  
+     7                                  ; put your data in this section using
+     8                                  ; db , dw, dd directions
+     9                                  ; this program has nothing in the .data 
+section
+    10                                  
+    11                                  section .bss
+    12                                  
+    13                                  ; put UNINITIALIZED data here using
+    14                                  ; this program has nothing in the .bss s
+ection
+    15                                  
+ 15                                  
+    16                                   
+    17                                  section .text
+    18                                          global _start
+    19                                  
+    20                                  _start:
+    21 00000000 66B80500                        mov ax,5  ; store 5 into the ax 
+register
+    22 00000004 66BB0200                keith:  mov bx,2  ; store 2 into the bx 
+register
+    23 00000008 6601D8                          add ax,bx ; ax = ax + bx
+
+(rest of the .lis file is intentionally  not shown )
+
+
+4. Create an executable program from the .o (object file)
+    with the Linux 'ld' command:
+
+The 'ld' command  "ld combines a number of object and archive files, 
+relocates their data and ties up symbol references. Usually the last
+in compiling a program is to run ld".
+
+
+If you are wondering how I knew this, try doing the following
+from the command prompt:
+
+ted@willpower NASM 12:44pm >man ld 
+
+Linux contains a command called 'man' (short for manual)
+which display the instructions for any Linux command. 
+Try listing (and reading ) the man pages for the 'ls'
+and 'more' commands.
+
+The command to run the linker is:
+
+ted@willpower NASM 12:44pm >ld  -melf_i386  -o add_2_numbers add_2_numbers.o
+
+Let us examine each part of the command line and its
+options and input files and output files:
+
+-melf_i386: specifies the emulation linker to be used. For our
+            environment, the elf_i386 is the required version.
+
+-o add_2_numbers:  The -o option is used to specifiy the
+                   name of the executable output file.
+                   In the absence of specifying an output
+                   file name, the default output file name
+                   is 'a.out' (which stands for 'assembler output')
+
+
+add_2_numbers.o : The input file to the ld command. Recall that
+                   the .o file was created by assembling your .asm
+                   file.
+
+
+Let's us run the 'file' command on the 'add_2_numbers' file
+created by the 'ld' command:
+
+ted@willpower NASM 12:52pm >file add_2_numbers
+add_2_numbers: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+
+
+It is a complete executable program ready to be run.
+
+SUMMARY: All the above steps, may be summarized in two lines:
+
+ed@willpower NASM 12:58pm >nasm -f elf add_2_numbers.asm -l add_2_numbers.lis
+ted@willpower NASM 12:58pm >ld -melf_i386 -o add_2_numbers add_2_numbers.o
+
+
+5. Running the program:
+
+We can run any executable program by typing its name on the
+Linux command prompt. The program will run and when it has
+reached the end of its exectiion, control returns to the user's
+command prompt. 
+
+ted@willpower NASM 12:58pm >add_2_numbers
+ted@willpower NASM DING! >
+
+
+You may be wondering "Where is the output of this program?
+Why did the program not do anything?".  The assembly
+language program produced no output since it did not
+contain any specific instructions to display anything on the
+screen. The program merely loaded two CPU registers with some
+constant values ( 5 and 2), and then added these two registers
+and saved the result in one of the registers. 
+
+When working in assembly language, one typically makes use
+of a debugger. A debugger is a program which runs an executable
+program one instruction at a time, and allows the user to display
+the contents of CPU registers, memory locations and other information
+instruction by instruction. This is known as single-stepping through
+a program.  The man page for gdb succintly summarizes what gdb is:
+
+DESCRIPTION
+       The purpose of a debugger such as GDB is to allow you to see what is
+       going on "inside" another program while it executes -- or what another
+       program was doing at the moment it crashed.
+     GDB can do four main kinds of things (plus other things in support of
+       these) to help you catch bugs in the act:
+
+       ·   Start your program, specifying anything that might affect its
+           behavior.
+
+       ·   Make your program stop on specified conditions.
+
+       ·   Examine what has happened, when your program has stopped.
+
+       ·   Change things in your program, so you can experiment with
+           correcting the effects of one bug and go on to learn about another.
+
+       You can use GDB to debug programs written in C, C@t{++}, Fortran and
+       Modula-2.
+
+       GDB is invoked with the shell command "gdb".  Once started, it reads
+    commands from the terminal until you tell it to exit with the GDB
+       command "quit".  You can get online help from GDB itself by using the
+       command "help"."
+
+
+
+
+
+The Linux gdb debugger will be used to single step through the
+executable program:
+
+ed@willpower NASM 1:09pm >gdb add_2_numbers
+GNU gdb (GDB) 7.7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-unknown-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from add_2_numbers...(no debugging symbols found)...done.
+(gdb) break keith
+Breakpoint 1 at 0x8048064
+
+
+COMMENTS: UPPERCASE WILL BE USED TO ANNOTATE THE USE OF GDB WITH
+CLARITIVE COMMENTS. THEY ARE NOT TO BE ENTERED AS GDB COMMANDS.
+THE 'break' COMMAND IS USED TO SET A BREAKPOINT IN THE PROGRAM.
+IN THIS CASE, WE SET A BREAKPOINT ON THE SECOND LINE OF CODE
+IN THE ASSEMBLY LANGUAGE PROGRAM BY SPECIFYING THE LABEL 'keith'
+IN THE GDB 'break' command.  RECALL THAT WE CAN GIVE ANY LINE
+IN OUR ASSEMBLY LANGUAGE PROGRAM A LABEL. SPECIFYING A BREAKPOINT
+WITHIN A DEBUGGING ENVIRONMENT IS ONE USE OF AN INSTRUCTION LABEL.
+
+GDB HAS THE QUIRK THAT A PROGRAM MUST BE RUN BEFORE ANY REGISTER
+CONTENTS CAN BE DISPLAYED. THUS, WE SET A BREAKPOINT AT THE SECOND
+INSTRUCTION AND USE THE GDB 'run' COMMAND TO RUN THE PROGRAM.
+PROGRAM EXECUTION WILL STOP AT THE SPECIFIED BREAKPOINT. WE CAN
+THEN USE GDB TO EXAMINE REGISTERS AND CONTINUE EXECUTION OF THE
+NEXT INSTRUCTION.
+
+(gdb) run
+Starting program: /nfs/home/t/ted/COEN311/NASM/add_2_numbers 
+
+Breakpoint 1, 0x08048064 in keith ()
+
+
+THE PROGRAM HAS RUN AND STOPPED AT INSTRUCTION STORED IN MAIN
+MEMORY AT ADDRESS 0x08048064 (HEXADECIMAL NUMBER). 
+LET US EXAMINE THE CONTENTS OF THE CPU REGISTERS WITH THE
+'info registers' GDB COMMAND:
+
+gdb) info registers
+eax            0x5      5
+ecx            0x0      0
+edx            0x0      0
+ebx            0x0      0
+esp            0xffffd100       0xffffd100
+ebp            0x0      0x0
+esi            0x0      0
+edi            0x0      0
+eip            0x8048064        0x8048064 <keith>
+eflags         0x202    [ IF ]
+cs             0x23     35
+ss             0x2b     43
+ds             0x2b     43
+es             0x2b     43
+fs             0x0      0
+gs             0x0      0
+
+
+NOTE THAT THE EAX REGISTER CONTAINS THE NUMBER 5
+AND THAT THE EIP (Extended Instruction Pointer, 
+ALSO COMMONLY CALLED THE PROGRAM COUNTER) CONTAINS
+THE NUMBER 0x8048064. THE EIP CONTAINS THE ADDRESS
+OF THE 'NEXT INSTRUCTION' TO BE EXECUTED.
+
+GDB CAN DISASSEMBLE THE PROGRAM IT IS RUNNING. 
+DISASSEMBLY IS THE PROCESS OF CONVERTING BINARY
+MACHINE CODE INTO HUMAN READABLE ASSEMBLY LANGUAGE
+INSTRUCTIONS. THE GDB COMMAND TO DISASSEMBLE IS
+'disassemble'. ADDRESSES IN HEX ARE SPECIFIED IN THE
+LEFT HAND SIDE, AND INSTRUCTIONS ARE LISTED ON THE RIGHT:
+
+gdb) disassemble
+Dump of assembler code for function keith:
+=> 0x08048064 <+0>:     mov    $0x2,%bx
+   0x08048068 <+4>:     add    %bx,%ax
+   0x0804806b <+7>:     mov    $0x1,%eax
+   0x08048070 <+12>:    mov    $0x0,%ebx
+   0x08048075 <+17>:    int    $0x80
+End of assembler dump.
+(gdb) 
+
+
+DISASSEMBLE BY DEFAULT DISASSEMBLES THE NEXT FEW INSTUCTIONS
+STARTING WITH THE INSTUCTION POINTED TO BY THE INSTRUCTION
+POINTER REGISTER. THE MORE ASTUTE READER WILL NOTE THAT
+THERE ARE DIFFERENCES BETWEEN THE DISASSEMBLED INSTRUCTIONS
+GENERATED BY GDB AND THE ASSEMBLY LANGUAGE INSTRUCTIONS ORIGINALLY
+WRITTEN IN THE .asm FILE. FOR EXAMPLE, WE TYPED IN:
+
+keith:  mov bx,2  ; store 2 into the bx register
+        add ax,bx ; ax = ax + bx
+
+
+BUT GDB DISASSEMBLED THESE AS:
+
+0x08048064 <+0>:     mov    $0x2,%bx
+0x08048068 <+4>:     add    %bx,%ax
+
+
+WE CAN USE THE  'set disassembly_flavor intel' INSTRUCTION
+TO TELL GDB TO USE INTEL x86 STYLE SYNTAX WHEN DISASSEMBLING
+(RATHER THAN THE non-INTEL DEFAULT).  THIS COMMAND MUST
+BE ISSUED BEFORE THE 'run' COMMAND IN ORDER TO HAVE ANY 
+EFFECT. IN WHAT FOLLOWS, I HAVE 'quit' FROM GDB, RESTARTED
+IT, and ISSUED THE :
+
+(gdb) set disassembly-flavor intel
+(gdb) break keith
+(gdb) run
+(gdb) disassemble
+Dump of assembler code for function keith:
+=> 0x08048064 <+0>:     mov    bx,0x2
+   0x08048068 <+4>:     add    ax,bx
+   0x0804806b <+7>:     mov    eax,0x1
+   0x08048070 <+12>:    mov    ebx,0x0
+   0x08048075 <+17>:    int    0x80
+End of assembler dump.
+
+
+COMMANDS. THE DISASSEMBLED OUTPUT NOW MORE CLOSELY RESEMBLES
+INTEL x86 SYNTAX.
+
+LET USE USE THE 'nexti' (can also enter is as simply 'ni')
+INSTRUCTION TO SINGLE STEP AND EXECUTE THE INSTRUCTION
+POINTED TO BY EIP (address 0x08048064) . BEFORE DOING SO,
+WE USE THE 'print' COMMAND TO DISPLAY THE CONTENTS OF REGISTER
+BX BEFORE THE mov bx,2 INSTRUCTION HAS BEEN EXECUTED:
+
+(gdb) print/x $bx
+$1 = 0x0
+
+
+IN GDB, $register_name REFERS TO THE CONTENTS OF THE SPECIFIED
+REGISTER. THE /X IS A FORMAT SPECIFIER INDICATING HEXADECIMAL
+OUTPUT IS TO BE USED WHEN DISPLAYING THE VALUE. WE NOTE THAT
+REGISTER BX HAS VALUE 0.
+
+WE NOW EXECUTE THE NEXT INSTRUCTION ('ni' command), DISASSEMBLE,
+AND DISPLAY THE CONTENTS OF REGISTER BX:
+
+(gdb) ni
+0x08048068 in keith ()
+(gdb) disassemble
+Dump of assembler code for function keith:
+   0x08048064 <+0>:     mov    bx,0x2
+=> 0x08048068 <+4>:     add    ax,bx
+   0x0804806b <+7>:     mov    eax,0x1
+   0x08048070 <+12>:    mov    ebx,0x0
+   0x08048075 <+17>:    int    0x80
+End of assembler dump.
+(gdb) print/x $bx
+$2 = 0x2
+(gdb)
+
+
+WE CAN CONTINUE IN THIS MANNER TO SINGLE STEP THROUGH THE
+REMAINING INSTRUCTIONS OF THE PROGRAM AND EXAMINING REGISTERS,
+ETC.:
+
+gdb) ni
+0x0804806b in keith ()
+(gdb) disassemble
+Dump of assembler code for function keith:
+   0x08048064 <+0>:     mov    bx,0x2
+   0x08048068 <+4>:     add    ax,bx
+=> 0x0804806b <+7>:     mov    eax,0x1
+   0x08048070 <+12>:    mov    ebx,0x0
+   0x08048075 <+17>:    int    0x80
+End of assembler dump.
+(gdb) print $ax
+$4 = 7
+
+
+GENERALLY, ONE DOES NOT NEED TO SINGLE STEP THROUGH THE LAST
+THREE INSTRUCTIONS OF AN INTEL x86 PROGRAM :
+
+mov    eax,0x1
+mov    ebx,0x0
+int    0x80
+
+
+SINCE THEY ARE MEANT TO BE EXECUTED WHEN A PROGRAM IS
+RUN FROM THE COMMAND PROMPT AND NOT WHEN SINGLE-STEPPING
+WITH GDB.  THE 'quit' COMMAND IS USED TO QUIT FROM GDB
+AND TO RETURN TO THE LINUX COMMAND PROMPT:
+
+gdb) quit
+A debugging session is active.
+
+        Inferior 1 [process 21396] will be killed.
+
+Quit anyway? (y or n) y
+ted@willpower NASM 2:12pm >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
