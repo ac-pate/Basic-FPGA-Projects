@@ -2,11 +2,12 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Jun 18 02:50:24 2024
-# Process ID: 32514
+# Start of session at: Tue Jun 18 01:30:42 2024
+# Process ID: 15495
 # Current directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.sim/sim_1/behav/xsim
 # Command line: wbtcv -mode batch -source /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
 source /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 18 01:30:42 2024...

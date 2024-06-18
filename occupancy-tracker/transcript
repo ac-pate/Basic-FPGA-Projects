@@ -8,41 +8,31 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-project open /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy_tracker.mpf
-# Loading project occupancy_tracker
+# vsim -debugDB occupancy_tracker 
+# ** Error: lock failed. Retrying 1 times, errno 11
+# ** Error: lock failed. Retrying 2 times, errno 11
+# ** Error: lock failed. Retrying 3 times, errno 11
+# ** Error: lock failed. Give up retry 3, errno 11
+# ** Error: Cannot lock WLF file: vsim.wlf
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 2
+#           Attempting to use alternate WLF file "./wlft6FwO0v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6FwO0v
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.occupancy_tracker(arch)#1
 # 
 #  
-# Compile of tracker.vhd was successful.
-# Compile of tracker_tb.vhd was successful.
-# 2 compiles, 0 failed with no errors. 
-run -all
-# No Design Loaded!
-# Load canceled
-vsim work.testbench
-# vsim work.testbench 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.testbench(top)#1
+add schematic sim:/occupancy_tracker
+add wave sim:/occupancy_tracker/*
 run
-run
-run
-run
-run
-run
-vsim -vopt work.testbench
-# vsim -vopt work.testbench 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.testbench(top)#1
-add wave sim:/testbench/tracker_inst/*
-add wave sim:/testbench/*
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /occupancy_tracker
 run
 run
 run
@@ -60,48 +50,3 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-add schematic sim:/testbench
-# Debug data file, vsim.dbg, does not exist.
-# 
-# Invoke vsim with -debugDB to create this file.
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 
-# Break key hit 

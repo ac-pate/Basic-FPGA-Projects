@@ -702,3 +702,7 @@ synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7839.402 ; gain = 152.133 ; free physical = 7050 ; free virtual = 19429
 write_schematic -format pdf -orientation portrait /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/schematic.pdf
 /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/schematic.pdf
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 18 02:50:27 2024...

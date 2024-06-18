@@ -60,3 +60,4 @@ create_bd_design "design_2"
 update_compile_order -fileset sources_1
 synth_design -rtl -name rtl_1
 write_schematic -format pdf -orientation portrait /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/schematic.pdf
+close_sim
