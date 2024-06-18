@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1718689805">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="occupancy_tracker.drc"/>
+  <File Type="BG-BGN" Name="occupancy_tracker.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="occupancy_tracker.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="occupancy_tracker.ltx"/>
+  <File Type="BITSTR-MMI" Name="occupancy_tracker.mmi"/>
+  <File Type="BITSTR-BMM" Name="occupancy_tracker_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="occupancy_tracker.nky"/>
+  <File Type="BITSTR-RBT" Name="occupancy_tracker.rbt"/>
+  <File Type="BITSTR-MSK" Name="occupancy_tracker.msk"/>
+  <File Type="BG-BIN" Name="occupancy_tracker.bin"/>
+  <File Type="BG-BIT" Name="occupancy_tracker.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="occupancy_tracker_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="occupancy_tracker_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="occupancy_tracker_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="occupancy_tracker.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="occupancy_tracker_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="occupancy_tracker_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="occupancy_tracker_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="occupancy_tracker_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="occupancy_tracker_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="occupancy_tracker_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="occupancy_tracker_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="occupancy_tracker_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="occupancy_tracker_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="occupancy_tracker_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="occupancy_tracker_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="occupancy_tracker_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="occupancy_tracker_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="occupancy_tracker_power_routed.rpx"/>
+  <File Type="PLACE-UTIL-PB" Name="occupancy_tracker_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="occupancy_tracker_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="occupancy_tracker_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="occupancy_tracker_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="occupancy_tracker_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="occupancy_tracker_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="occupancy_tracker_timing_summary_opted.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="occupancy_tracker_incremental_reuse_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="occupancy_tracker.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="occupancy_tracker_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="occupancy_tracker_reports.tcl"/>
+  <File Type="PWROPT-DRC" Name="occupancy_tracker_drc_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="occupancy_tracker_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="occupancy_tracker.tcl"/>
+  <File Type="INIT-TIMING" Name="occupancy_tracker_timing_summary_init.rpt"/>
+  <File Type="PLACE-CTRL" Name="occupancy_tracker_control_sets_placed.rpt"/>
+  <File Type="PWROPT-TIMING" Name="occupancy_tracker_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="occupancy_tracker_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-DCP" Name="occupancy_tracker_opt.dcp"/>
+  <File Type="OPT-DRC" Name="occupancy_tracker_drc_opted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="occupancy_tracker_methodology_drc_opted.rpt"/>
+  <File Type="PLACE-TIMING" Name="occupancy_tracker_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="occupancy_tracker_drc_routed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="occupancy_tracker_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="occupancy_tracker_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="occupancy_tracker_drc_routed.pb"/>
+  <File Type="PHYSOPT-DCP" Name="occupancy_tracker_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="occupancy_tracker_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="occupancy_tracker_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-PWR" Name="occupancy_tracker_power_routed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="occupancy_tracker_routed_error.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="occupancy_tracker_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="occupancy_tracker_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="occupancy_tracker_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="occupancy_tracker_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="occupancy_tracker_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="occupancy_tracker_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="occupancy_tracker_power_summary_routed.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/occupancy-tracker/tracker.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../tracker.vhd"/>
+        <Attr Name="ImportTime" Val="1718669426"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="occupancy_tracker"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/occupancy-tracker/tracker.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../tracker.xdc"/>
+        <Attr Name="ImportTime" Val="1718688590"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

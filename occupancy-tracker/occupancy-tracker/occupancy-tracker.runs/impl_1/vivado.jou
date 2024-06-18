@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jun 18 01:50:06 2024
+# Process ID: 19159
+# Current directory: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.runs/impl_1
+# Command line: vivado -log occupancy_tracker.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source occupancy_tracker.tcl -notrace
+# Log file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.runs/impl_1/occupancy_tracker.vdi
+# Journal file: /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/occupancy-tracker/occupancy-tracker.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source occupancy_tracker.tcl -notrace
