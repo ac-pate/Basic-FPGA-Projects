@@ -1,0 +1,18 @@
+/nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/tracker.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/tracker.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity occupancy_tracker
+-- Compiling architecture arch of occupancy_tracker
+
+} {} {}} /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/tracker_tb.vhd {1 {vcom -work work -2002 -explicit -vopt /nfs/home/a/ac_pate/COEN313/Basic-FPGA-Projects/occupancy-tracker/tracker_tb.vhd
+Model Technology ModelSim SE-64 vcom 6.6g Compiler 2012.05 May 23 2012
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity testbench
+-- Compiling architecture top of testbench
+
+} {} {}}
